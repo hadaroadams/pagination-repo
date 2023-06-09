@@ -1,13 +1,14 @@
 import { display } from "./display.js"
 
 export let num = 0
+let btns = document.querySelectorAll('footer button')
 export function button(){
-    let btns = document.querySelectorAll('footer button')
     btns.forEach((item)=>{
         let list = item
         item.onclick=(e)=>{
-            button()
             e.preventDefault()
+            console.log(e)
+           
             item.classList.add('active')
             console.log(item)
             if(item.id=='prev'){
@@ -30,15 +31,15 @@ export function button(){
                 console.log(num)
                 display()
             }
+            button()
         }
         list.classList.remove('active')
     })
-
     btns.forEach((item)=>{
+        item.classList.remove('active')
         if(item.id==`${num+1}`){
             item.classList.add('active')
         }
-    })
-    
+    })  
 }
 

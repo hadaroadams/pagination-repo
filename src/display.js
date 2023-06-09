@@ -8,7 +8,7 @@ export async function display(){
     let newNum = num*10
     let data2 =  await data()
     let data3 =data2.slice(newNum,newNum+10)
-    console.log(data3)
+    //console.log(data3)
     data3.map((item, numb)=>{
         if(numb<=10){
         let article = document.createElement('article')

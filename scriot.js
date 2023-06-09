@@ -9,4 +9,5 @@ import { display } from "./src/display.js";
  //console.log(await data())
 
 window.addEventListener('load',await display())
+
 button()
